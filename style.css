@@ -1,0 +1,120 @@
+:root {
+    --primeira-cor: #3498db;
+    --segunda-cor: #2ecc71;
+    --background-cor: #ecf0f1;
+    --texto-cor: #34495e;
+    --card-background: #ffffff;
+    --shadow-cor: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-cor);
+    color: var(--texto-cor);
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--primeira-cor);
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px; 
+    justify-content: center; 
+}
+
+form .product-input {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid var(--primeira-cor);
+    border-radius: 25px;
+    outline: none;
+}
+
+form .product-input:focus {
+    box-shadow: 0 0 5px var(--primeira-cor);
+}
+
+form button {
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 25px;
+    padding: 12px 25px;
+    background-color: var(--primeira-cor);
+    color: var(--background-cor);
+    border: none;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+.product-list {
+    margin-top: 20px; 
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-bottom: 30px;
+}
+
+.product-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--shadow-cor);
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow-cor);
+}
+
+.product-card h3 {    
+    font-size: 1.3rem;
+    color: var(--primeira-cor);
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.product-card .product-store {
+    color: var(--texto-cor);
+    margin-bottom: 5px;
+}
+
+.product-card .product-price {
+    color: var(--segunda-cor);
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
